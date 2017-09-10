@@ -1,4 +1,5 @@
 // Face variables
+// faceX, faceY and faceW will alter all other position variables
 var faceX = 200;
 var faceY = 230;
 var faceW = 330;
@@ -63,5 +64,6 @@ draw = function() {
     // Mouth
     arc(mouthX, mouthY, mouthW, mouthH, -15, 195);
     
+    // Make the eyes bigger
     eyeWidthHeight ++;
 };
