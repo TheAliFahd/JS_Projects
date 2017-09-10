@@ -1,15 +1,20 @@
+// Variables for the products name and slogan coordinates
 var productName = "Coca Cola";
 var sloganX = 10;
 var sloganY = 85;
 
+// the coke bottles x position
 var cokeMove = -355;
 
+// function for the slogan text to be called for re-draw
 var sloganText = function(){
     
+    // Display the products name
     fill(255, 0, 0);
     textSize(30);
     text(productName, 130, 40);
 
+    // Draw the products slogan with "Coke" in big red letters
     fill(0, 0, 0);
     textSize(20);
     text("Share a ", sloganX, sloganY);
@@ -72,13 +77,19 @@ var drawBottle = function(bottleX, bottleY, name){
 
 };
 
+// repeatedly draw the screen to animate the bottle into view
 draw = function() {
     
+    // Redraw the background and slogan text
     background(255, 255, 255);
     sloganText();
-
+    
+    // draw the bottle with the draw x position from last loop
     drawBottle(cokeMove, 200, "Mark");
+    
+    // if the bottle is not at the right position on screen
     if (cokeMove < 40){
+        // increase the bottle x to move to further
         cokeMove += 2;
     }
     
