@@ -1,3 +1,3 @@
 # JS_Projects
 
-Khan Academy Projects
+My Khan Academy Projects
