@@ -1,5 +1,9 @@
 // Initialize the arrays
 
+function setup(){
+    createCanvas(400, 400)
+}
+
 // hold x positions
 var xPositions = [];
 //hold y positions
@@ -39,17 +43,17 @@ var rock = getImage("cute/Rock");
 draw = function() {
     // re-draw backgroup
     background(204, 247, 255);
-    
+
     // loop through all the current items to be dropped
     for (var i = 0; i < xPositions.length; i++) {
-        
+
         // no don't want the rain to have a stoke
         noStroke();
         // fill with the current colour
         fill(rainColours[i]);
-        
+
         // varies drawing based on whichItem array
-        
+
         // if we are drawing rain the draw the rain at the new y position
         if (whichItem[i] === 0){
             ellipse(xPositions[i], yPositions[i], 10, 10);
