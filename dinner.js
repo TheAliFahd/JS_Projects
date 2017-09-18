@@ -1,6 +1,6 @@
-background(186, 145, 20); // wooden table
-ellipse(200, 200, 350, 350); // plate
-ellipse(200, 200, 300, 300); 
+function setup(){
+    createCanvas(400, 400)  
+}
 
 // Functions to organize each food
 // on the plate into blocks of code
@@ -80,8 +80,10 @@ var bread = function(){
 };
 
 // Main function to call the food drawing functions
-var main = function(){
-    
+function draw(){
+    background(186, 145, 20); // wooden table
+    ellipse(200, 200, 350, 350); // plate
+    ellipse(200, 200, 300, 300); 
     steak();
     
     grapes();
@@ -90,5 +92,3 @@ var main = function(){
     
     bread();
 };
-
-main();
